@@ -1,0 +1,61 @@
+html {
+	padding: 1em;
+}
+
+body {
+	color: #333;
+
+	font-size: small;
+	font-family: 'Ubuntu', 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+h1,
+h2 {
+	color: #555;
+	margin-bottom: 1em;
+}
+	h1 {
+		font-size: 250%;
+		border: none;
+	}
+	h2 {
+		margin-top: 1.5em;
+	}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	margin-left: 1.4em;
+}
+	ul li {
+		text-indent: -0.7em;
+		list-style-type: none;
+	}
+		ul li:before {
+			display: inline-block;
+			width: 0.7em;
+			content: "—";
+		}
+
+/* Editor only */
+body {
+	line-height: 1.6em;
+}
+	body > :first-child {
+		margin-top: 0;
+	}
+
+b, strong {
+	font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0.7em 0;
+}
