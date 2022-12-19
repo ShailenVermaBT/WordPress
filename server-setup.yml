@@ -1,0 +1,13 @@
+---
+- hosts : all
+- tasks :
+  -name: "Apache installation"
+   package : 
+    name : apache2
+    state : present
+  -name : "apache service start"
+   service : 
+    name : apache2 
+    state : started
+    enabled : yes
+-
