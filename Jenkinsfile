@@ -9,15 +9,11 @@ pipeline {
 
         stage("copy") {
             steps{
-                sh 'sudo cp -rS /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline /home/ubuntu'
+                sh 'ansible --version'
             }
         }
 
-        // stage("Ansible-playbook") {
-        //     steps{
-        //         sh 'ansible-playbook /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline/wordpress-lamp_ubuntu1804/playbook.yml'
-        //     }
-        // }
+        
     }
 }
 
