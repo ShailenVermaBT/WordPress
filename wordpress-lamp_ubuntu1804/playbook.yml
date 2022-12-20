@@ -5,7 +5,7 @@
 - hosts: all
   become: true
   vars_files:
-    - /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline/wordpress-lamp_ubuntu1804/files/vars/default.yml
+    - /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline/wordpress-lamp_ubuntu1804/vars/default.yml
 
   tasks:
     - name: Install prerequisites
