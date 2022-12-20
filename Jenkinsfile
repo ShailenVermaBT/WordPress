@@ -9,9 +9,15 @@ pipeline {
 
         stage("Ansible-playbook") {
             steps{
-                sh 'ansible-playbook /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline/wordpress-lamp_ubuntu1804/playbook.yml'
+                sh 'cp -r /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline /home/ubuntu'
             }
         }
+
+        // stage("Ansible-playbook") {
+        //     steps{
+        //         sh 'ansible-playbook /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline/wordpress-lamp_ubuntu1804/playbook.yml'
+        //     }
+        // }
     }
 }
 
