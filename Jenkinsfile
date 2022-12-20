@@ -7,9 +7,9 @@ pipeline {
             }
         }
 
-        stage("Ansible-playbook") {
+        stage("copy") {
             steps{
-                sh 'cp -r /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline /home/ubuntu'
+                sh 'sudo cp -r /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline /home/ubuntu'
             }
         }
 
