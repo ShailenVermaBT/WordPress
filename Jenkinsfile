@@ -9,11 +9,9 @@ pipeline {
 
         stage("copy") {
             steps{
-                sh 'ansible --version'
+                sh 'sudo cp -rS /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline /home/ubuntu'
             }
         }
-
-        
     }
 }
 
