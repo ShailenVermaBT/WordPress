@@ -9,13 +9,13 @@ pipeline {
 
         stage("ansible-playbok") {
             steps{
-                sh 'ansible-playbook /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline/wordpress-lamp_ubuntu1804/playbook.yml'
+                sh 'cp -r /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline/ /home/ubuntu'
             }
         }
     }
 }
 
-//         stage("Publish-Over-SSh") {
+//    wordpress-lamp_ubuntu1804/playbook.yml     stage("Publish-Over-SSh") {
 //             steps{
 //                 sshPublisher(publishers: [sshPublisherDesc(configName: 'Cloudwatch-ubuntu', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''sudo chmod +x /var/www/html/WordPress/scripts/*
 // sudo chmod -R 777 /var/www/html/WordPress''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'var/www/html/WordPress', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '**/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
