@@ -5,7 +5,7 @@
 - hosts: all
   become: true
   vars_files:
-    - vars/default.yml
+    - /wordpress-lamp_ubuntu1804/files/vars/default.yml
 
   tasks:
     - name: Install prerequisites
@@ -106,13 +106,13 @@
       tags: [ system ]
 
   # WordPress Configuration
-    - name: Download and unpack latest WordPress
-      unarchive:
-        src: https://wordpress.org/latest.tar.gz
-        dest: "/var/www/{{ http_host }}"
-        remote_src: yes
-        creates: "/var/www/{{ http_host }}/wordpress"
-      tags: [ wordpress ]
+    # - name: Download and unpack latest WordPress
+    #   unarchive:
+    #     src: https://wordpress.org/latest.tar.gz
+    #     dest: "/var/www/{{ http_host }}"
+    #     remote_src: yes
+    #     creates: "/var/www/{{ http_host }}/wordpress"
+    #   tags: [ wordpress ]
 
     - name: Set ownership
       file:
