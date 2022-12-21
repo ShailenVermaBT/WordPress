@@ -9,7 +9,7 @@ pipeline {
 
         stage("ansible-playbok") {
             steps{
-                sh 'ansible-playbook /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline/playbook.yml'
+                sh 'ansible-playbook /var/lib/jenkins/workspace/bluetris-website-folder1/TstPipeline/wordpress-lamp_ubuntu1804/playbook.yml'
             }
         }
     }
